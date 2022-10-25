@@ -12,7 +12,7 @@ import com.ibs.demo.model.AppliedLoans;
 @Repository
 public interface AppliedLoanRepository extends JpaRepository<AppliedLoans, Integer> {
 
-	@Query(value = "SELECT a.id, a.amount, a.duration, a.apply_date, a.loan_id, a.course_name, a.course_fee, a.annual_income, a.company_name, a.designation, a.total_experience, a.pan_no, a.permanent_address, a.user_id, l.id, l.name, l.interest FROM applied_loans a INNER JOIN loan_type l ON a.loan_id = l.id WHERE a.user_id = :userId", nativeQuery = true)
+	@Query(value = "SELECT a.id, a.amount, a.duration, a.apply_date, a.loan_id, a.course_name, a.course_fee, a.annual_income, a.designation, a.total_experience, a.permanent_address, a.user_id, l.id, l.name, l.interest FROM applied_loans a INNER JOIN loan_type l ON a.loan_id = l.id WHERE a.user_id = :userId", nativeQuery = true)
 	public List<AppliedLoans> findLoansByUser(@Param("userId") long userId);
 	
 	

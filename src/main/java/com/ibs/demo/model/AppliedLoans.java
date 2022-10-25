@@ -49,16 +49,16 @@ public class AppliedLoans {
 	@JsonProperty("annualIncome")
 	private long annual_income;
 	
-	@JsonProperty("companyName")
-	private String company_name;
+//	@JsonProperty("companyName")
+//	private String company_name;
 	
 	private String designation;
 	
 	@JsonProperty("totalExperience")
 	private Integer total_experience;
 	
-	@JsonProperty("panNo")
-	private String pan_no;
+//	@JsonProperty("panNo")
+//	private String pan_no;
 	
 	@JsonProperty("permanentAddress")
 	private String permanent_address;
